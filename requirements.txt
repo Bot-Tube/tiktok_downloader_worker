@@ -1,0 +1,10 @@
+celery==4.4.0
+requests==2.24.0
+python-dotenv
+
+"""
+$ pip install TikTokApi
+$ python -m playwright install
+
+https://koji-kanao.medium.com/get-tiktok-videos-with-less-than-10-lines-of-python-code-2bce8850c15e
+"""
