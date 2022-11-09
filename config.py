@@ -3,7 +3,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 
-ENV_PATH = Path(".") / "parser_worker.env"
+ENV_PATH = Path(".") / "tiktok_downloader.env"
 load_dotenv(dotenv_path=ENV_PATH)
 
 def get_configuration():
