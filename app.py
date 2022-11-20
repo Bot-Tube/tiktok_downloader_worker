@@ -4,10 +4,10 @@ from config import get_configuration
 
 configuration = get_configuration()
 
-celery = Celery("tasks", broker=configuration["celery_config"]["broker_url"])
+celery = Celery("tasks.tiktok_downloader_task", broker=configuration["celery_config"]["broker_url"])
 celery.conf.update(**configuration["celery_config"])
 celery.conf.task_queues = (Queue(configuration["queue_name"],
-                                 routing_key="tasks." + configuration["queue_name"],
+                                 routing_key="tasks.tiktok_downloader_task",
                                     **{"x-queue-mode": "lazy",
                                        "queue_arguments": {"x-queue-mode": "lazy"}}))
 

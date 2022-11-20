@@ -18,3 +18,6 @@ def get_configuration():
         "broker_connection_timeout": 120
     }}
     return configuration
+
+def get_backend_api_url() -> str:
+    return os.getenv("BACKEND_API")

@@ -9,7 +9,6 @@ class TiktokVideo:
     id: int                     # may remove
     tiktok_video_id: str
     insert_date: datetime.date = dataclasses.field()
-    video_create_date: datetime.date = dataclasses.field()
     video_url: str
 
     @classmethod
